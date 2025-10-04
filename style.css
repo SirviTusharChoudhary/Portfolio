@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 2;
     gap: 100px;
     position: sticky;
     margin: auto;
@@ -37,10 +38,6 @@ body {
 
 .navbar span {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* border-right: 1px solid white; */
-    animation: typing steps(23) linear,
-                blink 1s step-end infinite;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
     margin-inline: auto;
     overflow: hidden;
     white-space: nowrap;
@@ -64,22 +61,6 @@ body {
     color: rgb(0, 72, 255);
 }
 
-@keyframes typing {
-    from{
-        width: 0;
-    }
-    to {
-        width:100%;
-    }
-}
-
-@keyframes blink {
-    50%{
-        border-color: transparent;
-    }
-    
-}
-
 .grid {
     margin: 60px;
     gap: 70px;
@@ -91,6 +72,23 @@ body {
     grid-template-columns: 0.4fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
     min-height: 100vh;
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-areas:
+                                "profile"
+                                "about"
+                                "education"
+                                "skills"
+                                "project"
+                                "exp"
+                                "social";
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        margin: 20px;
+        gap : 50px;
+    }
 }
 
 .item {
@@ -107,6 +105,9 @@ body {
 }
 
 .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: profile;
 }
 
