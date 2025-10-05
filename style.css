@@ -139,6 +139,7 @@ header {
         font-size: 18px;
         width: 100%;
         word-spacing: 5px;
+        animation: none;
     }
 }
 
