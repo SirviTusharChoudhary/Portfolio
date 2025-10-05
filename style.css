@@ -58,7 +58,6 @@ header {
     font-size: 30px;
     animation: typing 3s steps(50) 1.5s both;
 }
-
 @keyframes typing {
     from {
         width: 0;
@@ -70,7 +69,9 @@ header {
     }
 }
 
-@keyframes slidedown {
+
+
+@keyframes slide {
     from{
         opacity: 0;
         transform: translateY(-50px);
@@ -129,6 +130,7 @@ header {
     }
     button {
         margin-bottom: 10px;
+        width: 90%;
     }
 }
 
