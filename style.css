@@ -137,8 +137,6 @@ header {
     }
     .navbar span {
         font-size: 18px;
-        overflow: visible;
-        white-space: normal;
         width: 100%;
         word-spacing: 5px;
     }
